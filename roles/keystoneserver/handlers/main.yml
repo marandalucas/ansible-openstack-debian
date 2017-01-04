@@ -1,0 +1,12 @@
+- name: restart uwsgi
+  service: name=uwsgi state=restarted
+
+- name: start keystone
+  service: name=keystone state=started
+
+- name: restart nginx
+  service: name=nginx state=restarted
+
+- name: start apache2
+  service: name=apache2 state=started
+
